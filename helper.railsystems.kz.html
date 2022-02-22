@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://helper.railsystems.kz/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link rel="icon" href="http://helper.railsystems.kz/helper.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://helper.railsystems.kz/helper.ico" type="image/x-icon">
+
+
+<script src="./helper.railsystems.kz_files/JsHttpRequest.js.Без названия"></script>
+<script src="./helper.railsystems.kz_files/jquery-1.10.2.min.js.Без названия"></script>
+<script src="./helper.railsystems.kz_files/jquery.zclip.min.js.Без названия"></script>
+
+
+
+
+
+
+
+<style type="text/css">
+   .block1 { 
+    width: 38%; 
+    background: #ccc;
+    padding: 5px;
+    padding-right: 5px; 
+    border: solid 1px black; 
+    float: left;
+   }
+   .block2 { 
+    width: 60%; 
+    background: #fc0; 
+    border: solid 1px black; 
+    float: right;
+	position: relative;   
+   }
+   .bottom { 
+    background: #DCF0F0; 
+    padding: 5px; 
+    border: solid 1px black; 
+    clear: both; 
+   }
+  </style> 
+</head>
+<body style="">
+
+<div class="block1">
+<!-- Please note that we must specify enctype to multipart/form-data! -->
+<form method="post" enctype="multipart/form-data" onsubmit="return false">
+    Enter a text: <input type="text" id="mystr" onkeypress="return runScript(event)"><br>
+    Define search scope: <br>
+    <input type="radio" id="scope1" name="scope" value="sn" checked="checked"> Last name<br>
+    <input type="radio" id="scope2" name="scope" value="samaccountname"> User logon name (pre-Windows 2000 Name)<br>
+    <input type="radio" id="scope3" name="scope" value="userprincipalname"> User logon name<br>
+    <input type="radio" id="scope4" name="scope" value="addr"> Hostname / IP Address (ищем владельца)<br>
+	<input type="radio" id="scope5" name="scope" value="uplink"> Hostname / IP Address (ищем uplink-порт)<br>
+    <input type="button" value="Search" onclick="search_logon()">
+</form>
+  </div>
+  <div class="block2">
+    <div id="debug" style="padding:2px"><table border="1"><tbody><tr><td>Крамнюк Алексей </td><td>A.Kramnyuk</td><td id="host"><a href="" class="copy-click">CONPC025.RAILSYSTEMS.KZ</a></td><td>5256</td></tr><tr><td>Крамнюк Алексей </td><td>a.kramnyuk</td><td id="host"><a href="" class="copy-click" data-tooltip-text="Click to copy" data-tooltip-text-copied="Copied to clipboard">123</a></td><td>5256</td></tr><tr><td>Крамнюк Алексей </td><td>a.kramnyuk</td><td id="host">IT1.RAILSYSTEMS.KZ</td><td>5256</td></tr><tr><td>Крамнюк Алексей </td><td>a.kramnyuk</td><td id="host">KTC214.RAILSYSTEMS.KZ</td><td>5256</td></tr><tr><td>Крамнюк Алексей </td><td>a.kramnyuk</td><td id="host">RWSPC130.RAILSYSTEMS.KZ</td><td>5256</td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">DC04.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">FS03.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">HYPERV10.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">HYPERV20.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">HYPERV250.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">PDC01.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">PDC03.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">PMKZ-DC-01.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">PMKZ-NAS-01.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">PS01.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">PS10.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">PS50.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">RWS-HYPERV-01.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">RWS-PROBE-01.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">RWS-RDLS-01.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">RWS-VBR-01.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">RWS-VOYAGER-01.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">RWS-WDS-02.RAILSYSTEMS.KZ</td><td></td></tr><tr><td>Крамнюк Алексей </td><td>a840803350640</td><td id="host">TS12.RAILSYSTEMS.KZ</td><td></td></tr></tbody></table></div>
+    <div id="answer" style="border:1px solid #000; padding:2px">Зарегистрированно 792 записей</div>
+</div>
+<div class="bottom">
+<b>Tips:</b>
+<ul>
+<li>Щелчек мышью по нужной cтроке cкопирует имя компьютера в буфер обмена (требуется flash)</li>
+</ul>
+</div> 
+
+
+<script id="rendered-js" src="./copy.js" ></script>
+
+
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,11 @@
+<td id="host"><a href="" class="copy-click">CONPC025.RAILSYSTEMS.KZ</a></td>
+
+
+
+
+<script id="rendered-js" src="./copy.js" ></script>
+
+
+
+
+Вставить перед закрытием тела Бади
